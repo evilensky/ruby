@@ -56,9 +56,10 @@ requiring to see why it does not behave as you expect.
 
       if paths.empty? then
         alert_error "Can't find ruby library file or shared library #{arg}"
+        found = false
       else
         say paths
-        found = true
+        found ||= true
       end
     end
 
